@@ -45,7 +45,7 @@ header {
 .nav {
   position: absolute;
   background-color: #464655;
-  top: 15%;
+  top: 12%;
   right: 0;
   height: 0;
   overflow: hidden;
@@ -54,7 +54,6 @@ header {
 .nav ul {
   margin: 0;
   padding: 0;
-  border-bottom: 1px solid #fff;
 }
 .nav li {
   color: #fff;
@@ -83,8 +82,8 @@ header {
  }
  .logo {
    color: #000;
-   font-size: 1.7em;
-   margin: 20px 5px;
+   font-size: 1.3em;
+   margin: 50px 10px;
    float: left;
    text-decoration: none;
  }
@@ -94,7 +93,7 @@ header {
  .phone {
  color: white;
  font-size: 10px;
- margin: 10px;
+ margin: 20px 10px;
  float: right;
 }
 .phoneNumber {
@@ -111,7 +110,7 @@ header {
 }
 .phoneNumber:hover {
     text-decoration: none;
-    color: #000;
+    color: #515390;
   }
  /* End of header style*/
  /***********************
@@ -120,8 +119,8 @@ header {
  .menu-toggle {
    padding: 2em;
    position: absolute;
-   top: 3.5em;
-   right: .5em;
+   top: 7.5%;
+   right: 1%;
    cursor: pointer;
  }
  .hamburger,
@@ -143,7 +142,6 @@ header {
  }
  .nav--open {
    height: auto;
-   position: fixed;
  }
  .open .hamburger {
    transform: rotate(45deg);
@@ -164,39 +162,23 @@ Body Style
     margin: auto;
     width: 20%;
   }
+  .bodyImg {
+    display: block;
+    width: 70%;
+    margin: 10px  auto;
+  }
+  .bodyText {
+    display: block;
+    width: 95%;
+    margin: 20px auto;
+  }
 .bodyTitle {
   width: 25%;
-  margin: 10px auto;
-}
-.bodyText {
-  display: block;
-  width: 95%;
-  margin: 20px auto;
-}
-/*.overlay {
-  position: relative;
-  width: 100%;
-}*/
-.bodyImg {
-  display: block;
-  width: 70%;
-  margin: 10px  auto;
-}
-.textOnImg {
-  position: absolute;
-  bottom: 20%;
-  right: 50%;
-  width: 100%;
-  background-color: #000;
-  color: #fff;
-  opacity: 05;
+  margin:  auto;
 }
 hr {
   height: 20px;
  	width: 80%;
-	height: 42px;
-	border-bottom: 0.5px solid #1f1209;
-	box-shadow: 0 15px 15px -15px #333;
   margin: auto;
 }
 small {
@@ -232,6 +214,10 @@ small {
 .buttonLearnMore:hover {
   background: #3498DB;
 }
+/* End of main photo style*/
+/*******************
+Two fixed links on the site
+*******************/
 .BookAndGet {
   box-shadow: 1px 2px 5px #000;
   width: 150px;
@@ -263,7 +249,7 @@ small {
   top: 57%;
   right: 0;
 }
-
+/* End of two fixed links style*/
 /***********************
 footer style
  **********************/
@@ -271,31 +257,28 @@ footer style
    font-family: sans-serif;
    font-size: 1.6;
    text-align: center;
-   color: #000;
-   background-color: azure;
+   background-color: #5B939E;
    height: 20vh;
    width: 100%;
-   padding:10px 0;
  }
- .servicesList ul{
-   text-align: center;
- }
- .servicesList li {
-   display: inline;
+ .servicesList  a{
+   display: inline-block;
    list-style-type: none;
-   text-decoration: underline;
-   margin-right: 5px;
+   margin:20px 1px 10px 1px;
    padding-right: 5px;
-   border-right: solid 1px #000;
-   color: #3F79BC;
+   border-right: solid 1px #fff;
+   color:#000;
  }
- .servicesList li:last-child {
+ .servicesList a:last-child {
    margin-right: 0;
    padding-right: 0;
    border-right: none;
  }
- .servicesList li a:hover {
-   color: #000;
+ .servicesList p a:hover {
+   color: #fff;
+ }
+ .social {
+   margin: 3px 3px 20px 3px;
  }
 /*End of footer style*/
 /**************************
@@ -307,6 +290,9 @@ Media Que.
 /* Page Header Styel*/
 header {
   height: 17vh;
+}
+.logo {
+  font-size: 1.7em;
 }
 .menu-toggle {
    display: none;
@@ -324,8 +310,6 @@ header {
 }
 .nav ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   justify-content: space-around;
   text-align: center;
@@ -337,13 +321,15 @@ header {
   font-size: 12px ;
   text-shadow: 3px;
   padding: 3px;
+  margin: auto;
+  width: 100%;
 }
 .nav li:last-child{
   border-right: none;
 }
 .nav a{
   padding: 5px;
-  margin: 0 10px;
+  margin: 0;
 }
 .nav a:hover {
   transform: scale(1.1);
@@ -355,22 +341,33 @@ header {
 /***********************
  Body Style
  **********************/
+#main-body,
+#main-body > div {
+  display: flex;
+  flex-direction: column;
+}
+#main-body > section {
+  display: flex;
+  flex-direction: row;
+}
  .bodyImg {
-
+  width: 40%;
+  height: 35%;
+  margin: 20px;
  }
-#footer {
-  width: 100%;
-  height: 20vh;
-  background-color: azure;
-  font-size: 1.2em;
-}
+ .secImg {
+  order: 4;
+ }
 
-#copy {
- float: left;
- margin-left: 25px;
- margin-top: 10px;;
-}
-.social {
-    float: right;
-    margin-right: 25px;
+ /*****************
+  Footer style
+ *****************/
+ /*?*/
+/********* media > 1025px **************/
+
+@media only screen and (min-width: 1025px) {
+#main-body{
+    width: 70%;
+    margin: auto;
+  }
 }
