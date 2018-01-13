@@ -41,9 +41,99 @@
   </div>
 </section>
 <hr>
-<h3 class="testimonial">
-  Testimonial
-</h3>
+<div class="testimonial-content"> <!--slide contanier-->
+    <div class="quote-container fade"> <!--slide class number 1-->
+        <img alt="firstOne" src="img/tariq.png" />
+          <blockquote>
+            <p>"Their services
+            are beyond anything I could have imagined.
+            It gets my highest recommendation0 Their services
+            are beyond anything I could have imagined.
+            It gets my highest recommendation0."
+            </p>
+            <cite>
+              <span>Tariq Alrehily</span>
+            </cite>
+          </blockquote>
+    </div>
+    <div class="quote-container fade"> <!--slide class number 2-->
+          <img alt="firstOne" src="img/tariq.png" />
+          <blockquote>
+            <p>"Their services
+            are beyond anything I could have imagined.
+            It gets my highest recommendation1 Their services
+            are beyond anything I could have imagined.
+            It gets my highest recommendation1."
+            </p>
+            <cite>
+              <span>Tariq Alrehily</span>
+            </cite>
+          </blockquote>
+    </div>
+    <div class="quote-container fade"> <!--slide class number 3-->
+          <img alt="firstOne" src="img/tariq.png" />
+          <blockquote>
+            <p>"Their services
+            are beyond anything I could have imagined.
+            It gets my highest recommendation2 Their services
+            are beyond anything I could have imagined.
+            It gets my highest recommendation2."
+            </p>
+            <cite>
+              <span>Tariq Alrehily</span>
+            </cite>
+          </blockquote>
+    </div>
+    <div class="quote-container fade"> <!--slide class number 4-->
+          <img alt="firstOne" src="img/tariq.png" />
+          <blockquote>
+            <p>"Their services
+            are beyond anything I could have imagined.
+            It gets my highest recommendation3 Their services
+            are beyond anything I could have imagined.
+            It gets my highest recommendation3."
+            </p>
+            <cite>
+              <span>Tariq Alrehily</span>
+            </cite>
+          </blockquote>
+    </div>
+    <div class="quote-container fade"> <!--slide class number 5-->
+          <img alt="firstOne" src="img/tariq.png" />
+          <blockquote>
+            <p>"Their services
+            are beyond anything I could have imagined.
+            It gets my highest recommendation4 Their services
+            are beyond anything I could have imagined.
+            It gets my highest recommendation4."
+            </p>
+            <cite>
+              <span>Tariq Alrehily</span>
+            </cite>
+          </blockquote>
+    </div>
+    <div class="quote-container fade">
+      <img alt="firstOne" src="img/tariq.png" />
+          <blockquote>
+            <p>"Their services
+            are beyond anything I could have imagined.
+            It gets my highest recommendation5 Their services
+            are beyond anything I could have imagined.
+            It gets my highest recommendation5."
+            </p>
+            <cite>
+              <span>Tariq Alrehily</span>
+            </cite>
+          </blockquote>
+    </div>
+  </div> <!-- End of testimonial-list -->
+  <div> <!-- For dots  style="text-align:center" -->
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div>
 <hr />
 <div id="main-body">
 <section>
@@ -115,5 +205,27 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="JavaScript/Js.js"></script>
+<script src="JavaScript/testSlider.js"></script>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName(".quote-container");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
 </body>
 </html>
