@@ -1,5 +1,4 @@
-// burgermune function
 $('.menu-toggle').click(function(){
-  $('.nav').toggleClass('nav--open');
+  $('.main-nav').toggleClass('main-nav--open');
   $(this).toggleClass('open');
   })

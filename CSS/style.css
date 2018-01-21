@@ -161,73 +161,46 @@ header {
 Body Style
 **********************/
 /* Slideshow container */
-.testimonial-content {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+.SliderName {
+	text-align: left;
+	margin-left: 10%;
+	font-size: 14px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color: #444;
 }
-
-/* Hide the images by default */
-.quote-container {
-    /*display: none;*/
-}
-/* The dots/bullets/indicators */
-.dot {
-  text-align: center;
-  cursor:pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-.active, .dot:hover {
-  background-color: #717171;
-}
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-
-/*.testimonial-content {
-   margin: auto;
+.slider {
+   width: 90%;
+   max-width: 1170px;
+   height: 25vh;
+   margin: 0 auto;
+   background-color: #e5e5e5;
    padding: 10px;
-   width: 100%;
-   background-color: #D3D3D3;
 }
-.quote-container {
-  display: block;
-  opacity: 0.8;
-  color: #666666;
-  font-size: 1.2rem;
-  margin: auto;
-  width: 95%;
+.sliderImg {
+  		width: 80px;
+  		height: 80px;
+      display: block;
+  		border-radius: 100%;
+  		border:5px solid rgba(0,0,0,0.08);
+  		margin:5px auto;
 }
-.demo {
-  display: block;
-  color: red;
-}*/
-/*.slick {
-  display: block;
-  color: #000;
-  border: 1px solid #000;
-  width: 4px;
-  margin: auto;
-}*/
+.quote {
+		display: block;
+		width: 70%;
+		position: relative;
+		padding: 20px 25px;
+		font-size: 15px;
+		line-height: 24px;
+}
+.quote::before,
+.quote::after {
+    position: absolute;
+		content: '';// url for quote
+		width: 20px;
+		height: 20px;
+  }
   .bodyImg {
     display: block;
     width: 70%;
@@ -307,12 +280,12 @@ Two fixed links on the site
 }
 .BookNow {
   position: fixed;
-  top: 50%;
+  bottom: 15%;
   right: 0;
 }
 .GetAVoucher {
   position: fixed;
-  top: 57%;
+  bottom: 10%;
   right: 0;
 }
 /* End of two fixed links style*/
@@ -416,6 +389,27 @@ header {
   display: flex;
   flex-direction: row;
 }
+.SliderName {
+    margin-left: 13%;
+}
+.slider {
+     width: 80%;
+     height: 25vh;
+}
+.quote {
+		width: 70%;
+		position: relative;
+		padding: 20px 25px;
+    margin: 25px 5px;
+		font-size: 15px;
+		line-height: 24px;
+}
+.sliderImg {
+      float: left;
+      margin: 25px 10px;
+      width: 140px;
+      height: 140px;
+}
  .bodyImg {
   width: 40%;
   height: 35%;
@@ -433,7 +427,21 @@ header {
 
 @media only screen and (min-width: 1025px) {
 #main-body{
-    width: 70%;
+    width: 65%;
     margin: auto;
   }
+  .SliderName{
+    margin-left: 17%;
+  }
+  .slider {
+       /*width: 70%;*/
+       max-width: 1170px;
+       height: 25vh;
+  }
+  .sliderImg {
+    		width: 160px;
+    		height: 160px;
+    		margin:5px 30px 0 5px;
+  }
+
 }
